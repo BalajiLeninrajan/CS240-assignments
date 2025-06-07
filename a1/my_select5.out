@@ -1,0 +1,553 @@
+node 0 : A1 < A0 ? 1 : 2
+node 1 : A2 < A1 ? 3 : 4
+node 2 : A2 < A0 ? 5 : 6
+node 3 : A3 < A2 ? 7 : 8
+node 4 : A3 < A1 ? 9 : 10
+node 5 : A3 < A2 ? 11 : 12
+node 6 : A3 < A0 ? 13 : 14
+node 7 : A4 < A3 ? 15 : 16
+node 8 : A4 < A2 ? 17 : 18
+node 9 : A4 < A3 ? 19 : 20
+node 10 : A4 < A1 ? 21 : 22
+node 11 : A4 < A3 ? 23 : 24
+node 12 : A4 < A2 ? 25 : 26
+node 13 : A4 < A3 ? 27 : 28
+node 14 : A4 < A0 ? 29 : 30
+node 15 : A2 < A1 ? 31 : 32
+node 16 : A2 < A1 ? 33 : 34
+node 17 : A2 < A1 ? 35 : 36
+node 18 : A0 < A1 ? 37 : 38
+node 19 : A2 < A1 ? 39 : 40
+node 20 : A2 < A1 ? 41 : 42
+node 21 : A2 < A1 ? 43 : 44
+node 22 : A2 < A0 ? 45 : 46
+node 23 : A2 < A1 ? 47 : 48
+node 24 : A2 < A1 ? 49 : 50
+node 25 : A2 < A1 ? 51 : 52
+node 26 : A0 < A1 ? 53 : 54
+node 27 : A2 < A1 ? 55 : 56
+node 28 : A2 < A1 ? 57 : 58
+node 29 : A2 < A1 ? 59 : 60
+node 30 : A2 < A1 ? 61 : 62
+node 31 : A3 < A2 ? 63 : 64
+node 32 : not reached
+node 33 : A0 < A2 ? 67 : 68
+node 34 : not reached
+node 35 : A3 < A2 ? 71 : 72
+node 36 : not reached
+node 37 : not reached
+node 38 : A3 < A1 ? 77 : 78
+node 39 : not reached
+node 40 : A3 < A1 ? 81 : 82
+node 41 : not reached
+node 42 : A0 < A1 ? 85 : 86
+node 43 : not reached
+node 44 : A3 < A1 ? 89 : 90
+node 45 : A3 < A2 ? 91 : 92
+node 46 : A3 < A0 ? 93 : 94
+node 47 : A3 < A2 ? 95 : 96
+node 48 : not reached
+node 49 : A0 < A2 ? 99 : 100
+node 50 : not reached
+node 51 : A3 < A2 ? 103 : 104
+node 52 : not reached
+node 53 : A3 < A0 ? 107 : 108
+node 54 : not reached
+node 55 : A3 < A2 ? 111 : 112
+node 56 : A3 < A1 ? 113 : 114
+node 57 : A0 < A2 ? 115 : 116
+node 58 : A0 < A1 ? 117 : 118
+node 59 : A3 < A2 ? 119 : 120
+node 60 : A3 < A1 ? 121 : 122
+node 61 : A3 < A2 ? 123 : 124
+node 62 : A3 < A1 ? 125 : 126
+node 63 : A0 < A3 ? 127 : 128
+node 64 : not reached
+node 67 : not reached
+node 68 : A4 < A2 ? 137 : 138
+node 71 : not reached
+node 72 : A0 < A2 ? 145 : 146
+node 77 : A4 < A3 ? 155 : 156
+node 78 : A4 < A1 ? 157 : 158
+node 81 : A0 < A3 ? 163 : 164
+node 82 : not reached
+node 85 : not reached
+node 86 : A4 < A1 ? 173 : 174
+node 89 : not reached
+node 90 : A0 < A1 ? 181 : 182
+node 91 : A4 < A3 ? 183 : 184
+node 92 : A4 < A2 ? 185 : 186
+node 93 : A4 < A3 ? 187 : 188
+node 94 : A4 < A0 ? 189 : 190
+node 95 : A0 < A3 ? 191 : 192
+node 96 : not reached
+node 99 : not reached
+node 100 : A4 < A2 ? 201 : 202
+node 103 : not reached
+node 104 : A0 < A2 ? 209 : 210
+node 107 : A4 < A3 ? 215 : 216
+node 108 : A4 < A0 ? 217 : 218
+node 111 : A0 < A3 ? 223 : 224
+node 112 : not reached
+node 113 : A0 < A3 ? 227 : 228
+node 114 : not reached
+node 115 : A4 < A0 ? 231 : 232
+node 116 : not reached
+node 117 : A4 < A0 ? 235 : 236
+node 118 : not reached
+node 119 : A0 < A3 ? 239 : 240
+node 120 : A0 < A2 ? 241 : 242
+node 121 : A0 < A3 ? 243 : 244
+node 122 : A0 < A1 ? 245 : 246
+node 123 : A4 < A3 ? 247 : 248
+node 124 : A4 < A2 ? 249 : 250
+node 125 : A4 < A3 ? 251 : 252
+node 126 : A4 < A1 ? 253 : 254
+node 127 : not reached
+node 128 : A1 < A2 ? 257 : 258
+node 137 : A0 < A2 ? 275 : 276
+node 138 : A0 < A1 ? 277 : 278
+node 145 : not reached
+node 146 : A3 < A1 ? 293 : 294
+node 155 : A3 < A0 ? 311 : 312
+node 156 : A1 < A0 ? 313 : 314
+node 157 : A3 < A0 ? 315 : 316
+node 158 : A3 < A0 ? 317 : 318
+node 163 : not reached
+node 164 : A1 < A2 ? 329 : 330
+node 173 : A0 < A2 ? 347 : 348
+node 174 : A0 < A2 ? 349 : 350
+node 181 : not reached
+node 182 : A3 < A2 ? 365 : 366
+node 183 : A3 < A2 ? 367 : 368
+node 184 : A0 < A2 ? 369 : 370
+node 185 : A3 < A2 ? 371 : 372
+node 186 : A3 < A0 ? 373 : 374
+node 187 : A3 < A2 ? 375 : 376
+node 188 : A0 < A2 ? 377 : 378
+node 189 : A3 < A2 ? 379 : 380
+node 190 : A3 < A2 ? 381 : 382
+node 191 : not reached
+node 192 : A1 < A2 ? 385 : 386
+node 201 : A0 < A2 ? 403 : 404
+node 202 : A0 < A1 ? 405 : 406
+node 209 : not reached
+node 210 : A3 < A1 ? 421 : 422
+node 215 : A3 < A0 ? 431 : 432
+node 216 : A1 < A0 ? 433 : 434
+node 217 : A3 < A0 ? 435 : 436
+node 218 : A3 < A1 ? 437 : 438
+node 223 : not reached
+node 224 : A1 < A2 ? 449 : 450
+node 227 : not reached
+node 228 : A1 < A2 ? 457 : 458
+node 231 : A0 < A2 ? 463 : 464
+node 232 : A1 < A2 ? 465 : 466
+node 235 : A0 < A2 ? 471 : 472
+node 236 : A1 < A2 ? 473 : 474
+node 239 : A3 < A2 ? 479 : 480
+node 240 : not reached
+node 241 : A3 < A2 ? 483 : 484
+node 242 : not reached
+node 243 : A3 < A2 ? 487 : 488
+node 244 : not reached
+node 245 : A3 < A2 ? 491 : 492
+node 246 : not reached
+node 247 : A3 < A2 ? 495 : 496
+node 248 : A1 < A2 ? 497 : 498
+node 249 : A3 < A2 ? 499 : 500
+node 250 : A3 < A1 ? 501 : 502
+node 251 : A3 < A2 ? 503 : 504
+node 252 : A1 < A2 ? 505 : 506
+node 253 : A3 < A2 ? 507 : 508
+node 254 : A3 < A2 ? 509 : 510
+node 257 : not reached
+node 258 : A0 < A2 ? 517 : 518
+node 275 : not reached
+node 276 : A1 < A2 ? 553 : 554
+node 277 : not reached
+node 278 : A4 < A1 ? 557 : 558
+node 293 : A0 < A3 ? 587 : 588
+node 294 : A0 < A1 ? 589 : 590
+node 311 : A1 < A3 ? 623 : 624
+node 312 : not reached
+node 313 : A4 < A1 ? 627 : 628
+node 314 : not reached
+node 315 : A1 < A3 ? 631 : 632
+node 316 : A1 < A0 ? 633 : 634
+node 317 : A4 < A3 ? 635 : 636
+node 318 : A4 < A0 ? 637 : 638
+node 329 : A0 < A1 ? 659 : 660
+node 330 : not reached
+node 347 : A1 < A0 ? 695 : 696
+node 348 : A1 < A2 ? 697 : 698
+node 349 : A4 < A0 ? 699 : 700
+node 350 : A4 < A2 ? 701 : 702
+node 365 : A0 < A3 ? 731 : 732
+node 366 : A0 < A2 ? 733 : 734
+node 367 : A0 < A3 ? 735 : 736
+node 368 : not reached
+node 369 : not reached
+node 370 : A4 < A2 ? 741 : 742
+node 371 : not reached
+node 372 : A0 < A2 ? 745 : 746
+node 373 : A4 < A3 ? 747 : 748
+node 374 : A4 < A0 ? 749 : 750
+node 375 : A0 < A3 ? 751 : 752
+node 376 : not reached
+node 377 : A4 < A0 ? 755 : 756
+node 378 : not reached
+node 379 : A0 < A3 ? 759 : 760
+node 380 : A0 < A2 ? 761 : 762
+node 381 : A4 < A3 ? 763 : 764
+node 382 : A4 < A2 ? 765 : 766
+node 385 : not reached
+node 386 : A0 < A2 ? 773 : 774
+node 403 : not reached
+node 404 : A1 < A2 ? 809 : 810
+node 405 : A4 < A0 ? 811 : 812
+node 406 : not reached
+node 421 : A0 < A3 ? 843 : 844
+node 422 : A0 < A1 ? 845 : 846
+node 431 : A1 < A3 ? 863 : 864
+node 432 : not reached
+node 433 : not reached
+node 434 : A4 < A0 ? 869 : 870
+node 435 : not reached
+node 436 : A1 < A0 ? 873 : 874
+node 437 : A4 < A3 ? 875 : 876
+node 438 : A4 < A1 ? 877 : 878
+node 449 : not reached
+node 450 : A0 < A2 ? 901 : 902
+node 457 : A0 < A1 ? 915 : 916
+node 458 : not reached
+node 463 : A1 < A0 ? 927 : 928
+node 464 : not reached
+node 465 : not reached
+node 466 : A4 < A2 ? 933 : 934
+node 471 : A1 < A0 ? 943 : 944
+node 472 : not reached
+node 473 : A4 < A1 ? 947 : 948
+node 474 : not reached
+node 479 : A1 < A3 ? 959 : 960
+node 480 : not reached
+node 483 : not reached
+node 484 : A1 < A2 ? 969 : 970
+node 487 : A1 < A3 ? 975 : 976
+node 488 : not reached
+node 491 : A1 < A3 ? 983 : 984
+node 492 : A1 < A2 ? 985 : 986
+node 495 : A1 < A3 ? 991 : 992
+node 496 : not reached
+node 497 : not reached
+node 498 : A4 < A2 ? 997 : 998
+node 499 : not reached
+node 500 : A1 < A2 ? 1001 : 1002
+node 501 : A4 < A3 ? 1003 : 1004
+node 502 : A4 < A1 ? 1005 : 1006
+node 503 : A1 < A3 ? 1007 : 1008
+node 504 : not reached
+node 505 : A4 < A1 ? 1011 : 1012
+node 506 : not reached
+node 507 : A1 < A3 ? 1015 : 1016
+node 508 : A1 < A2 ? 1017 : 1018
+node 509 : A4 < A3 ? 1019 : 1020
+node 510 : A4 < A2 ? 1021 : 1022
+node 517 : not reached
+node 518 : A0 < A1 ? 1037 : 1038
+node 553 : not reached
+node 554 : A1 < A0 ? 1109 : 1110
+node 557 : A1 < A0 ? 1115 : 1116
+node 558 : A4 < A0 ? 1117 : 1118
+node 587 : not reached
+node 588 : A0 < A1 ? 1177 : 1178
+node 589 : not reached
+node 590 : A0 < A3 ? 1181 : 1182
+node 623 : not reached
+node 624 : A1 < A0 ? 1249 : 1250
+node 627 : A0 < A1 ? 1255 : 1256
+node 628 : A4 < A0 ? 1257 : 1258
+node 631 : A0 < A3 ? 1263 : 1264
+node 632 : not reached
+node 633 : A0 < A3 ? 1267 : 1268
+node 634 : not reached
+node 635 : A0 < A3 ? 1271 : 1272
+node 636 : A4 < A0 ? 1273 : 1274
+node 637 : A0 < A3 ? 1275 : 1276
+node 638 : A4 < A3 ? 1277 : 1278
+node 659 : not reached
+node 660 : A0 < A2 ? 1321 : 1322
+node 695 : A2 < A0 ? 1391 : 1392
+node 696 : not reached
+node 697 : A2 < A0 ? 1395 : 1396
+node 698 : not reached
+node 699 : A2 < A0 ? 1399 : 1400
+node 700 : A4 < A2 ? 1401 : 1402
+node 701 : A2 < A0 ? 1403 : 1404
+node 702 : A4 < A0 ? 1405 : 1406
+node 731 : A2 < A3 ? 1463 : 1464
+node 732 : A0 < A2 ? 1465 : 1466
+node 733 : A2 < A3 ? 1467 : 1468
+node 734 : A0 < A3 ? 1469 : 1470
+node 735 : not reached
+node 736 : A0 < A2 ? 1473 : 1474
+node 741 : A2 < A0 ? 1483 : 1484
+node 742 : A4 < A0 ? 1485 : 1486
+node 745 : not reached
+node 746 : A0 < A3 ? 1493 : 1494
+node 747 : A0 < A3 ? 1495 : 1496
+node 748 : A4 < A0 ? 1497 : 1498
+node 749 : A0 < A3 ? 1499 : 1500
+node 750 : A4 < A3 ? 1501 : 1502
+node 751 : not reached
+node 752 : A0 < A2 ? 1505 : 1506
+node 755 : A2 < A0 ? 1511 : 1512
+node 756 : A4 < A2 ? 1513 : 1514
+node 759 : A2 < A3 ? 1519 : 1520
+node 760 : not reached
+node 761 : A2 < A3 ? 1523 : 1524
+node 762 : not reached
+node 763 : A2 < A3 ? 1527 : 1528
+node 764 : A4 < A2 ? 1529 : 1530
+node 765 : A2 < A3 ? 1531 : 1532
+node 766 : A4 < A3 ? 1533 : 1534
+node 773 : not reached
+node 774 : A0 < A1 ? 1549 : 1550
+node 809 : not reached
+node 810 : A1 < A0 ? 1621 : 1622
+node 811 : A1 < A0 ? 1623 : 1624
+node 812 : A4 < A1 ? 1625 : 1626
+node 843 : A1 < A3 ? 1687 : 1688
+node 844 : A0 < A1 ? 1689 : 1690
+node 845 : A1 < A3 ? 1691 : 1692
+node 846 : not reached
+node 863 : not reached
+node 864 : A1 < A0 ? 1729 : 1730
+node 869 : A0 < A1 ? 1739 : 1740
+node 870 : A4 < A1 ? 1741 : 1742
+node 873 : not reached
+node 874 : A1 < A3 ? 1749 : 1750
+node 875 : A1 < A3 ? 1751 : 1752
+node 876 : A4 < A1 ? 1753 : 1754
+node 877 : A1 < A3 ? 1755 : 1756
+node 878 : A4 < A3 ? 1757 : 1758
+node 901 : A2 < A1 ? 1803 : 1804
+node 902 : not reached
+node 915 : A2 < A1 ? 1831 : 1832
+node 916 : not reached
+node 927 : not reached
+node 928 : A1 < A2 ? 1857 : 1858
+node 933 : A2 < A1 ? 1867 : 1868
+node 934 : A4 < A1 ? 1869 : 1870
+node 943 : not reached
+node 944 : A1 < A2 ? 1889 : 1890
+node 947 : A2 < A1 ? 1895 : 1896
+node 948 : A4 < A2 ? 1897 : 1898
+node 959 : not reached
+node 960 : A1 < A2 ? 1921 : 1922
+node 969 : not reached
+node 970 : A1 < A3 ? 1941 : 1942
+node 975 : not reached
+node 976 : A1 < A2 ? 1953 : 1954
+node 983 : A2 < A3 ? 1967 : 1968
+node 984 : not reached
+node 985 : A2 < A3 ? 1971 : 1972
+node 986 : not reached
+node 991 : not reached
+node 992 : A1 < A2 ? 1985 : 1986
+node 997 : A2 < A1 ? 1995 : 1996
+node 998 : A4 < A1 ? 1997 : 1998
+node 1001 : not reached
+node 1002 : A1 < A3 ? 2005 : 2006
+node 1003 : A1 < A3 ? 2007 : 2008
+node 1004 : A4 < A1 ? 2009 : 2010
+node 1005 : A1 < A3 ? 2011 : 2012
+node 1006 : A4 < A3 ? 2013 : 2014
+node 1007 : not reached
+node 1008 : A1 < A2 ? 2017 : 2018
+node 1011 : A2 < A1 ? 2023 : 2024
+node 1012 : A4 < A2 ? 2025 : 2026
+node 1015 : A2 < A3 ? 2031 : 2032
+node 1016 : not reached
+node 1017 : A2 < A3 ? 2035 : 2036
+node 1018 : not reached
+node 1019 : A2 < A3 ? 2039 : 2040
+node 1020 : A4 < A2 ? 2041 : 2042
+node 1021 : A2 < A3 ? 2043 : 2044
+node 1022 : A4 < A3 ? 2045 : 2046
+node 1037 : not reached
+node 1038 : 4 3 2 1 0
+node 1109 : 3 4 2 1 0
+node 1110 : not reached
+node 1115 : 3 2 4 1 0
+node 1116 : not reached
+node 1117 : 3 2 1 4 0
+node 1118 : 3 2 1 0 4
+node 1177 : not reached
+node 1178 : 4 2 3 1 0
+node 1181 : 4 2 1 0 3
+node 1182 : 4 2 1 3 0
+node 1249 : 2 4 3 1 0
+node 1250 : not reached
+node 1255 : not reached
+node 1256 : 2 3 4 1 0
+node 1257 : 2 3 1 4 0
+node 1258 : 2 3 1 0 4
+node 1263 : not reached
+node 1264 : 2 4 1 3 0
+node 1267 : 2 4 1 0 3
+node 1268 : not reached
+node 1271 : not reached
+node 1272 : 2 1 4 3 0
+node 1273 : 2 1 3 4 0
+node 1274 : 2 1 3 0 4
+node 1275 : 2 1 4 0 3
+node 1276 : not reached
+node 1277 : 2 1 0 4 3
+node 1278 : 2 1 0 3 4
+node 1321 : 4 3 1 0 2
+node 1322 : 4 3 1 2 0
+node 1391 : not reached
+node 1392 : 3 4 1 0 2
+node 1395 : 3 4 1 2 0
+node 1396 : not reached
+node 1399 : not reached
+node 1400 : 3 1 4 0 2
+node 1401 : 3 1 0 4 2
+node 1402 : 3 1 0 2 4
+node 1403 : 3 1 4 2 0
+node 1404 : not reached
+node 1405 : 3 1 2 4 0
+node 1406 : 3 1 2 0 4
+node 1463 : not reached
+node 1464 : 4 1 0 3 2
+node 1465 : 4 1 3 0 2
+node 1466 : 4 1 3 2 0
+node 1467 : 4 1 0 2 3
+node 1468 : not reached
+node 1469 : 4 1 2 0 3
+node 1470 : 4 1 2 3 0
+node 1473 : not reached
+node 1474 : 1 4 3 2 0
+node 1483 : 1 3 4 2 0
+node 1484 : not reached
+node 1485 : 1 3 2 4 0
+node 1486 : 1 3 2 0 4
+node 1493 : 1 4 2 0 3
+node 1494 : 1 4 2 3 0
+node 1495 : not reached
+node 1496 : 1 2 4 3 0
+node 1497 : 1 2 3 4 0
+node 1498 : 1 2 3 0 4
+node 1499 : 1 2 4 0 3
+node 1500 : not reached
+node 1501 : 1 2 0 4 3
+node 1502 : 1 2 0 3 4
+node 1505 : 1 4 3 0 2
+node 1506 : not reached
+node 1511 : not reached
+node 1512 : 1 3 4 0 2
+node 1513 : 1 3 0 4 2
+node 1514 : 1 3 0 2 4
+node 1519 : not reached
+node 1520 : 1 4 0 3 2
+node 1523 : 1 4 0 2 3
+node 1524 : not reached
+node 1527 : not reached
+node 1528 : 1 0 4 3 2
+node 1529 : 1 0 3 4 2
+node 1530 : 1 0 3 2 4
+node 1531 : 1 0 4 2 3
+node 1532 : not reached
+node 1533 : 1 0 2 4 3
+node 1534 : 1 0 2 3 4
+node 1549 : 4 3 2 0 1
+node 1550 : not reached
+node 1621 : not reached
+node 1622 : 3 4 2 0 1
+node 1623 : not reached
+node 1624 : 3 2 4 0 1
+node 1625 : 3 2 0 4 1
+node 1626 : 3 2 0 1 4
+node 1687 : not reached
+node 1688 : 4 2 0 3 1
+node 1689 : 4 2 3 0 1
+node 1690 : not reached
+node 1691 : 4 2 0 1 3
+node 1692 : not reached
+node 1729 : not reached
+node 1730 : 2 4 3 0 1
+node 1739 : 2 3 4 0 1
+node 1740 : not reached
+node 1741 : 2 3 0 4 1
+node 1742 : 2 3 0 1 4
+node 1749 : 2 4 0 1 3
+node 1750 : 2 4 0 3 1
+node 1751 : not reached
+node 1752 : 2 0 4 3 1
+node 1753 : 2 0 3 4 1
+node 1754 : 2 0 3 1 4
+node 1755 : 2 0 4 1 3
+node 1756 : not reached
+node 1757 : 2 0 1 4 3
+node 1758 : 2 0 1 3 4
+node 1803 : 4 3 0 2 1
+node 1804 : not reached
+node 1831 : not reached
+node 1832 : 4 3 0 1 2
+node 1857 : not reached
+node 1858 : 3 4 0 2 1
+node 1867 : 3 0 4 2 1
+node 1868 : not reached
+node 1869 : 3 0 2 4 1
+node 1870 : 3 0 2 1 4
+node 1889 : 3 4 0 1 2
+node 1890 : not reached
+node 1895 : not reached
+node 1896 : 3 0 4 1 2
+node 1897 : 3 0 1 4 2
+node 1898 : 3 0 1 2 4
+node 1921 : not reached
+node 1922 : 4 0 3 2 1
+node 1941 : 4 0 2 1 3
+node 1942 : 4 0 2 3 1
+node 1953 : 4 0 3 1 2
+node 1954 : not reached
+node 1967 : not reached
+node 1968 : 4 0 1 3 2
+node 1971 : 4 0 1 2 3
+node 1972 : not reached
+node 1985 : not reached
+node 1986 : 0 4 3 2 1
+node 1995 : 0 3 4 2 1
+node 1996 : not reached
+node 1997 : 0 3 2 4 1
+node 1998 : 0 3 2 1 4
+node 2005 : 0 4 2 1 3
+node 2006 : 0 4 2 3 1
+node 2007 : not reached
+node 2008 : 0 2 4 3 1
+node 2009 : 0 2 3 4 1
+node 2010 : 0 2 3 1 4
+node 2011 : 0 2 4 1 3
+node 2012 : not reached
+node 2013 : 0 2 1 4 3
+node 2014 : 0 2 1 3 4
+node 2017 : 0 4 3 1 2
+node 2018 : not reached
+node 2023 : not reached
+node 2024 : 0 3 4 1 2
+node 2025 : 0 3 1 4 2
+node 2026 : 0 3 1 2 4
+node 2031 : not reached
+node 2032 : 0 4 1 3 2
+node 2035 : 0 4 1 2 3
+node 2036 : not reached
+node 2039 : not reached
+node 2040 : 0 1 4 3 2
+node 2041 : 0 1 3 4 2
+node 2042 : 0 1 3 2 4
+node 2043 : 0 1 4 2 3
+node 2044 : not reached
+node 2045 : 0 1 2 4 3
+node 2046 : 0 1 2 3 4

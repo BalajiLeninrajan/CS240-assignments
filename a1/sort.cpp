@@ -1,4 +1,3 @@
-#include <cstddef>
 #include <iostream>
 #include <vector>
 
@@ -106,8 +105,17 @@ public:
 
   void print_dtree() {
     for (size_t i = 0; i < dtree.size(); i++) {
-      cout << "Node " << i << " :";
       const Node &node = dtree[i];
+
+      if (i != 0) {
+        const Node &parent = dtree[(i - 1) / 2];
+        if (parent.i == -1 && parent.j == -1) {
+          continue;
+        }
+      }
+
+      cout << "node " << i << " :";
+
       if (node.idx != -1) {
         for (const auto &elem : inverse_perms[node.idx]) {
           cout << " " << elem;
@@ -142,8 +150,7 @@ void insertion_sort(DecisionTree &dtree, vector<int> &A, vector<int> &Alookup,
 
   for (int i = 1; i < n; i++)
     for (int j = i; j > 0; j--) {
-      Node newNode{Alookup[A[j - 1]], Alookup[A[j]], -1};
-      dtree.dtree_add(newNode, dt_idx);
+      dtree.dtree_add(Node{Alookup[A[j - 1]], Alookup[A[j]], -1}, dt_idx);
       if (A[j - 1] > A[j]) {
         dt_idx = 2 * dt_idx + 1; // left child
         swap(A[j], A[j - 1]);
@@ -160,10 +167,16 @@ void selection_sort(DecisionTree &dtree, vector<int> &A, vector<int> &Alookup,
 
   for (int i = 0; i < n - 1; i++) {
     int idx = i;
-    for (int j = i + 1; j < n; j++)
+    for (int j = i + 1; j < n; j++) {
+      dtree.dtree_add(Node{Alookup[A[idx]], Alookup[A[j]], -1}, dt_idx);
       if (A[j] < A[idx]) {
+        dt_idx = 2 * dt_idx + 1; // left child
         idx = j;
+      } else {
+        dt_idx = 2 * dt_idx + 2;
       }
+    }
+
     swap(A[i], A[idx]);
   }
 }
@@ -181,6 +194,5 @@ int main(int argc, char *argv[]) {
   cin >> algo_select >> algo_n;
   DecisionTree dt(algo_select, algo_n);
   dt.print_dtree();
-  dt.debug_print_nodes();
   return 0;
 }
