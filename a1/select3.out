@@ -1,0 +1,15 @@
+node 0 : A1 < A0 ? 1 : 2
+node 1 : A2 < A1 ? 3 : 4
+node 2 : A2 < A0 ? 5 : 6
+node 3 : A0 < A1 ? 7 : 8
+node 4 : A2 < A0 ? 9 : 10
+node 5 : A0 < A1 ? 11 : 12
+node 6 : A2 < A1 ? 13 : 14
+node 7 : not reached
+node 8 : 2 1 0
+node 9 : 1 2 0
+node 10 : 1 0 2
+node 11 : 2 0 1
+node 12 : not reached
+node 13 : 0 2 1
+node 14 : 0 1 2

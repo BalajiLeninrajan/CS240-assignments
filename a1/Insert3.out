@@ -1,0 +1,11 @@
+node 0 : A1 < A0 ? 1 : 2
+node 1 : A2 < A0 ? 3 : 4
+node 2 : A2 < A1 ? 5 : 6
+node 3 : A2 < A1 ? 7 : 8
+node 4 : 1 0 2
+node 5 : A2 < A0 ? 11 : 12
+node 6 : 0 1 2
+node 7 : 2 1 0
+node 8 : 1 2 0
+node 11 : 2 0 1
+node 12 : 0 2 1
