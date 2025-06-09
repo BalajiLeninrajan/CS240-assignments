@@ -17,10 +17,10 @@ struct Node {
 
 class DecisionTree;
 
-void insertion_sort(DecisionTree &dtree, vector<int> &A, vector<int> &Alookup,
-                    size_t &dt_idx);
-void selection_sort(DecisionTree &dtree, vector<int> &A, vector<int> &Alookup,
-                    size_t &dt_idx);
+void insertion_sort(DecisionTree &dtree, vector<int> &A,
+                    const vector<int> &Alookup, size_t &dt_idx);
+void selection_sort(DecisionTree &dtree, vector<int> &A,
+                    const vector<int> &Alookup, size_t &dt_idx);
 
 class DecisionTree {
 private:
@@ -153,8 +153,8 @@ public:
   }
 };
 
-void insertion_sort(DecisionTree &dtree, vector<int> &A, vector<int> &Alookup,
-                    size_t &dt_idx) {
+void insertion_sort(DecisionTree &dtree, vector<int> &A,
+                    const vector<int> &Alookup, size_t &dt_idx) {
   int n = A.size();
 
   for (int i = 1; i < n; i++)
@@ -171,8 +171,8 @@ void insertion_sort(DecisionTree &dtree, vector<int> &A, vector<int> &Alookup,
     }
 }
 
-void selection_sort(DecisionTree &dtree, vector<int> &A, vector<int> &Alookup,
-                    size_t &dt_idx) {
+void selection_sort(DecisionTree &dtree, vector<int> &A,
+                    const vector<int> &Alookup, size_t &dt_idx) {
   int n = A.size();
 
   for (int i = 0; i < n - 1; i++) {
