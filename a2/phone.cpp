@@ -47,6 +47,7 @@ class Dname {
   const int R = 255;
   std::vector<std::forward_list<DnameEntry>> table;
 
+  // convert name to a number using the flattening technique and Horner's rule
   int convert_name_to_key(const std::string &name) const {
     int key = 0;
     for (auto c : name) {
@@ -56,8 +57,18 @@ class Dname {
   }
 
 public:
+  /**
+   * @brief Constructs a new Dname object with a hash table of given size with
+   * chaining
+   * @param size Initial size of the hash table (default: 11)
+   */
   Dname(int size = 11) : M(size), table(size) {}
 
+  /**
+   * @brief Inserts a name-phone entry into the hash table
+   * @param entry The DnameEntry containing name and phone number
+   * @note Phone numbers for the same name are stored in sorted order
+   */
   void insert(const DnameEntry &entry) {
     int key = convert_name_to_key(entry.name);
     auto &chain = table[key];
@@ -70,7 +81,11 @@ public:
     }
     chain.insert_after(prev, entry);
   }
-
+  /**
+   * @brief Searches for all phone numbers associated with a given name
+   * @param name The name to search for
+   * @return Vector of phone numbers associated with the name, in sorted order
+   */
   std::vector<std::string> search(const std::string &name) const {
     std::vector<std::string> result;
     int key = convert_name_to_key(name);
@@ -80,10 +95,13 @@ public:
         result.push_back(entry.phone);
       }
     }
-
     return result;
   }
 
+  /**
+   * @brief Doubles the hash table size to the next prime number and rehashes
+   * all entries
+   */
   void rehash() {
     auto oldtable = std::move(table);
     M = find_first_bigger_prime(2 * M + 1);
@@ -95,6 +113,9 @@ public:
     }
   }
 
+  /**
+   * @brief Clears the hash table and resets its size to 11
+   */
   void clear() {
     M = 11;
     table.assign(M, {});
@@ -124,6 +145,7 @@ class Dphone {
   std::vector<std::optional<DphoneEntry>> table0;
   std::vector<std::optional<DphoneEntry>> table1;
 
+  // convert phone number string to a base 10 integer representation
   long convert_phone(const std::string &phone) const {
     return std::stol(phone.substr(1, 3)) * 10000000 +
            std::stol(phone.substr(5, 3)) * 10000 +
@@ -131,8 +153,19 @@ class Dphone {
   }
 
 public:
+  /**
+   * @brief Constructs a new Dphone object with two hash tables of given size
+   * for cuckoo hashing
+   * @param size Initial size of each hash table (default: 11)
+   */
   Dphone(int size = 11) : M(size), table0(size), table1(size) {}
 
+  /**
+   * @brief Inserts a phone-name entry using cuckoo hashing with two hash
+   * functions
+   * @param entry The DphoneEntry containing phone number and name
+   * @note Will trigger rehash if insertion cycle exceeds table size
+   */
   void insert(DphoneEntry entry) {
     int tableId = 0;
     for (int i = 0; i <= M; ++i) {
@@ -148,15 +181,24 @@ public:
       entry = evict.value();
       tableId = 1 - tableId;
     }
+
+    // rehash and retry if there's no space in the table
     rehash();
     insert(entry);
   }
 
+  /**
+   * @brief Searches for a name associated with a given phone number
+   * @param phone The phone number to search for
+   * @return The associated name or "not found" if not present
+   */
   std::string search(const std::string &phone) const {
+    // check first table
     auto entry = table0[hash0(convert_phone(phone), M)];
     if (entry && entry.value().phone == phone) {
       return entry.value().name;
     }
+    // check second table
     entry = table1[hash1(convert_phone(phone), M)];
     if (entry && entry.value().phone == phone) {
       return entry.value().name;
@@ -164,6 +206,10 @@ public:
     return "not found";
   }
 
+  /**
+   * @brief Doubles both hash tables' size to the next prime number and rehashes
+   * all entries
+   */
   void rehash() {
     auto oldTable0 = std::move(table0);
     auto oldTable1 = std::move(table1);
@@ -175,7 +221,6 @@ public:
         insert(entry.value());
       }
     }
-
     for (auto &entry : oldTable1) {
       if (entry) {
         insert(entry.value());
@@ -183,6 +228,9 @@ public:
     }
   }
 
+  /**
+   * @brief Clears both hash tables and resets their size to 11
+   */
   void clear() {
     M = 11;
     table0.assign(M, {});
@@ -191,9 +239,11 @@ public:
 
   friend std::ostream &operator<<(std::ostream &os, const Dphone &dphone) {
     os << dphone.M;
+    // print values in first hash table
     for (const auto entry : dphone.table0) {
       os << " " << (entry.has_value() ? "1" : "0");
     }
+    // print values in second hash table
     for (const auto entry : dphone.table1) {
       os << " " << (entry.has_value() ? "1" : "0");
     }
