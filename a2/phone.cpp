@@ -73,10 +73,8 @@ public:
     int key = convert_name_to_key(entry.name);
     auto &chain = table[key];
     auto prev = chain.before_begin();
-    for (auto it = chain.begin(); it != chain.end(); ++it) {
-      if (it->phone >= entry.phone) {
-        break;
-      }
+    for (auto it = chain.begin(); it != chain.end() && it->phone < entry.phone;
+         ++it) {
       prev = it;
     }
     chain.insert_after(prev, entry);
